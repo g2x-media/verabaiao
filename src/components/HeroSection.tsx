@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/9babb572-1f1b-4b11-bf23-78edbaa3f198.jpg";
 export const HeroSection = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -36,7 +37,7 @@ export const HeroSection = () => {
           {/* Image */}
           <div className="order-1 lg:order-2 relative">
             <div className="relative mx-auto max-w-md lg:max-w-lg">
-              <img alt="Vera Baumgarten - Psicóloga Clínica" className="rounded-3xl shadow-2xl w-full object-cover aspect-[3/4]" src="/lovable-uploads/9babb572-1f1b-4b11-bf23-78edbaa3f198.jpg" />
+              <img alt="Vera Baumgarten - Psicóloga Clínica" className="rounded-3xl shadow-2xl w-full object-cover aspect-[3/4]" src={heroImage} />
               {/* Floating Card */}
               <div className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 bg-card rounded-2xl shadow-xl p-4 lg:p-6">
                 <p className="text-sm text-muted-foreground">CRP 00/00000</p>
