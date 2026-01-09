@@ -1,3 +1,4 @@
+import aboutImage from "@/assets/6f56e003-b16b-4ed3-9262-5d6f274fcc04.jpg";
 import { Heart, Sparkles, Shield } from "lucide-react";
 const values = [{
   icon: Heart,
@@ -18,7 +19,7 @@ export const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative">
-            <img alt="Consultório acolhedor" className="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]" src="/lovable-uploads/6f56e003-b16b-4ed3-9262-5d6f274fcc04.jpg" />
+            <img alt="Consultório acolhedor" className="rounded-3xl shadow-xl w-full object-cover aspect-[4/5]" src={aboutImage} />
           </div>
 
           {/* Content */}
