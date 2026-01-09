@@ -53,106 +53,49 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="max-w-2xl mx-auto">
           {/* Contact Info */}
-          <div>
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              {contactInfo.map((info) => (
-                <div
-                  key={info.label}
-                  className="bg-card rounded-2xl p-6 border border-border"
-                >
-                  <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4">
-                    <info.icon className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-1">
-                    {info.label}
-                  </p>
-                  {info.href ? (
-                    <a
-                      href={info.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      {info.value}
-                    </a>
-                  ) : (
-                    <p className="font-medium text-foreground">{info.value}</p>
-                  )}
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            {contactInfo.map((info) => (
+              <div
+                key={info.label}
+                className="bg-card rounded-2xl p-6 border border-border"
+              >
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4">
+                  <info.icon className="w-6 h-6 text-accent-foreground" />
                 </div>
-              ))}
-            </div>
+                <p className="text-sm text-muted-foreground mb-1">
+                  {info.label}
+                </p>
+                {info.href ? (
+                  <a
+                    href={info.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-foreground hover:text-primary transition-colors"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <p className="font-medium text-foreground">{info.value}</p>
+                )}
+              </div>
+            ))}
+          </div>
 
-            <Button
-              asChild
-              className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full py-6 text-base"
+          <Button
+            asChild
+            className="w-full bg-green-600 hover:bg-green-700 text-white rounded-full py-6 text-base"
+          >
+            <a
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a
-                href="https://wa.me/5511999999999"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Falar pelo WhatsApp
-              </a>
-            </Button>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-card rounded-2xl p-8 border border-border">
-            <h3 className="font-display text-2xl text-foreground font-semibold mb-6">
-              Envie uma mensagem
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm text-muted-foreground mb-2 block">
-                    Nome
-                  </label>
-                  <Input
-                    placeholder="Seu nome"
-                    className="rounded-xl border-border"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm text-muted-foreground mb-2 block">
-                    Telefone
-                  </label>
-                  <Input
-                    placeholder="(00) 00000-0000"
-                    className="rounded-xl border-border"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm text-muted-foreground mb-2 block">
-                  E-mail
-                </label>
-                <Input
-                  type="email"
-                  placeholder="seu@email.com"
-                  className="rounded-xl border-border"
-                />
-              </div>
-              <div>
-                <label className="text-sm text-muted-foreground mb-2 block">
-                  Mensagem
-                </label>
-                <Textarea
-                  placeholder="Como posso ajudá-lo(a)?"
-                  rows={4}
-                  className="rounded-xl border-border resize-none"
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-coral-dark text-primary-foreground rounded-full py-6 text-base"
-              >
-                Enviar Mensagem
-              </Button>
-            </form>
-          </div>
+              <Phone className="w-5 h-5 mr-2" />
+              Falar pelo WhatsApp
+            </a>
+          </Button>
         </div>
       </div>
     </section>
